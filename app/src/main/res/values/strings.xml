@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Layout Meta Quiz</string>
+
+    <!-- Blank text for username. -->
+    <string name="name">Please enter your name.</string>
+
+    <!-- Question 1. -->
+    <string name="question_1">1.  How many questions does your quiz app have?</string>
+
+    <!-- Question 1 with corrections. -->
+    <string name="question_1_correction">1.  How many questions does your quiz app have?  Aim for 4 to 10 questions.  </string>
+
+    <!-- This is the blank text for question 1's response. -->
+    <string name="question_1_response">Number</string>
+
+    <!-- If question 1 is blank, you will get this message. -->
+    <string name="empty_question_1">Question 1 is blank.  Please provide a valid number.</string>
+
+    <!-- Question 2. -->
+    <string name="question_2">2.  Please select the types of questions included in your app:</string>
+
+    <!--These three strings below are the responses to Question 2:-->
+    <string name="question_2_response_a">Free text response(s)</string>
+
+    <string name="question_2_response_b">Checkbox(es)</string>
+
+    <string name="question_2_response_c">Radio Button(s)</string>
+
+    <!-- Question 3. -->
+    <string name="question_3">3.   Do you have a working submit button that provides a score in a Toast?</string>
+
+    <!-- Yes or no answer for Question 3-->
+    <string name="yes">Yes</string>
+
+    <string name="no">No</string>
+
+    <!-- Question 4. -->
+    <string name="question_4">4.  How are your text sizes defined?</string>
+
+    <!-- Question 4 correction -->
+    <string name="question_4_correction">sp - use these for your text sizes!</string>
+
+    <!-- Question 5. -->
+    <string name="question_5">5.  Now, what about those padding/margin lengths?</string>
+
+    <!-- Question 5 correction -->
+    <string name="question_5_correction">fp - use these for your lengths!</string>
+
+    <!--These four answers below are responses to Questions 4 and 5:-->
+    <string name="sp">sp</string>
+
+    <string name="dp">dp</string>
+
+    <string name="fp">fp</string>
+
+    <string name="hp">hp</string>
+
+    <!-- Question 6. -->
+    <string name="question_6">6. How do your views look?</string>
+
+    <string name="question_6_response_a">Even Steven!  All of my views are spaced appropriately.</string>
+
+    <!-- Question 6 correction -->
+    <string name="question_6_correction">Make sure your views are spaced appropriately!</string>
+
+    <string name="question_6_response_b">It\'s like a broken accordion here!  No good&#8230;</string>
+
+    <!-- Question 7. -->
+    <string name="question_7">7.  Now, how about that view variety?  Please select the following view(s) you have used in your app:</string>
+
+    <!-- Question 7 correction -->
+    <string name="question_7_correction">7.  You could use more view variety. Please add more views to your quiz app.</string>
+
+    <!-- Question 8. -->
+    <string name="question_8">8.  Does your app handle rotation gracefully? </string>
+
+    <!-- Question 8 correction -->
+    <string name="question_8_correction">8.  You should adjust rotation to make it more graceful. </string>
+
+    <!-- The prompt for submitting your test. -->
+    <string name="submit_prompt">When finished, press the Submit button below. \n\nIf you want to clear the highlighting, hit Reset.</string>
+
+    <!-- Submit Button -->
+    <string name="submit_button">Submit</string>
+
+    <!-- Submit Button -->
+    <string name="reset">Reset</string>
+
+    <!-- Toast that displays if score is 100% -->
+    <string name="test_results"><xliff:g example="Amy" id="name">%1$s</xliff:g>, your quiz app meets <xliff:g example="100" id="calculateScore">%2$d%%</xliff:g> of layout specifications!  Congratulations!</string>
+
+    <!-- Toast that displays if score is NOT 100% -->
+    <string name="try_again"><xliff:g example="Amy" id="name">%1$s</xliff:g>, you\'re on your way!  You are currently <xliff:g example="100" id="calculateScore">%2$d%%</xliff:g> complete.</string>
+
+</resources>
