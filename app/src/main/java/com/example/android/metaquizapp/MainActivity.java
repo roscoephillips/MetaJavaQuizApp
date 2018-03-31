@@ -5,16 +5,13 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +42,43 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Highlights the TextView if question is incorrect.
+     *
+     * @param editedTextView     is the TextView to be edited.
+     * @param textViewCorrection changes the text in the TextView to an error correction message.
+     */
+    private void highlightErrorQuestion(TextView editedTextView, String textViewCorrection) {
+        TextView highlightErrorQuestion = (TextView) editedTextView;
+        highlightErrorQuestion.setTextColor(Color.WHITE);
+        highlightErrorQuestion.setBackgroundColor((Color.parseColor("#2196F3")));
+        highlightErrorQuestion.setText(textViewCorrection);
+    }
+
+
+    /**
+     * Highlights the CheckBox if question is incorrect.
+     *
+     * @param editedCheckBox is the CheckBox to be highlighted.
+     */
+    private void highlightCheckBox(CheckBox editedCheckBox) {
+        CheckBox highlightCheckBox = (CheckBox) editedCheckBox;
+        highlightCheckBox.setTextColor(Color.WHITE);
+        highlightCheckBox.setBackgroundColor((Color.parseColor("#2196F3")));
+    }
+
+
+    /**
+     * Highlights the RadioButton if question is incorrect.
+     *
+     * @param editedRadioButton is the RadioButton to be highlighted.
+     */
+    private void highlightRadioButton(RadioButton editedRadioButton) {
+        RadioButton highlightRadioButton = (RadioButton) editedRadioButton;
+        highlightRadioButton.setTextColor(Color.WHITE);
+        highlightRadioButton.setBackgroundColor((Color.parseColor("#2196F3")));
+    }
+
     void submitTestResults(View view) {
 
 
@@ -61,10 +95,7 @@ public class MainActivity extends AppCompatActivity {
             if (questionsQuantity >= 4 && questionsQuantity <= 10) {
                 userScore++;
             } else {
-                TextView question1 = (TextView) findViewById(R.id.question1Text);
-                question1.setTextColor(Color.parseColor("#FFFFFF"));
-                question1.setBackgroundColor(Color.parseColor("#2196F3"));
-                question1.setText(getString(R.string.question_1_correction));
+                highlightErrorQuestion((TextView) findViewById(R.id.question1Text), getString(R.string.question_1_correction));
             }
 
         } catch (NumberFormatException blankQuestion) {
@@ -80,22 +111,20 @@ public class MainActivity extends AppCompatActivity {
         if (question2ACheckBox.isChecked()) {
             userScore++;
         } else {
-            question2ACheckBox.setTextColor(Color.parseColor("#FFFFFF"));
-            question2ACheckBox.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightCheckBox((CheckBox) findViewById(R.id.question_2_response_a));
         }
         CheckBox question2BCheckBox = (CheckBox) findViewById(R.id.question_2_response_b);
         if (question2BCheckBox.isChecked()) {
             userScore++;
         } else {
-            question2BCheckBox.setTextColor(Color.parseColor("#FFFFFF"));
-            question2BCheckBox.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightCheckBox((CheckBox) findViewById(R.id.question_2_response_b));
         }
         CheckBox question2CCheckBox = (CheckBox) findViewById(R.id.question_2_response_c);
         if (question2CCheckBox.isChecked()) {
             userScore++;
         } else {
-            question2CCheckBox.setTextColor(Color.parseColor("#FFFFFF"));
-            question2CCheckBox.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightCheckBox((CheckBox) findViewById(R.id.question_2_response_c));
+
         }
 
         /**
@@ -106,8 +135,7 @@ public class MainActivity extends AppCompatActivity {
         if (isQuestion3YesChecked) {
             userScore++;
         } else {
-            question3RadioButton.setTextColor(Color.parseColor("#FFFFFF"));
-            question3RadioButton.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightRadioButton((RadioButton) findViewById(R.id.question_3_yes));
         }
 
 
@@ -119,8 +147,7 @@ public class MainActivity extends AppCompatActivity {
         if (isQuestion4SpChecked) {
             userScore++;
         } else {
-            question4RadioButton.setTextColor(Color.parseColor("#FFFFFF"));
-            question4RadioButton.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightRadioButton((RadioButton) findViewById(R.id.question_4_sp));
             question4RadioButton.setText(getString(R.string.question_4_correction));
         }
 
@@ -133,11 +160,9 @@ public class MainActivity extends AppCompatActivity {
         if (isQuestion5DpChecked) {
             userScore++;
         } else {
-            question5RadioButton.setTextColor(Color.parseColor("#FFFFFF"));
-            question5RadioButton.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightRadioButton((RadioButton) findViewById(R.id.question_5_dp));
             question5RadioButton.setText(getString(R.string.question_5_correction));
         }
-
 
         /**
          * Gives user credit for question 6.
@@ -147,15 +172,13 @@ public class MainActivity extends AppCompatActivity {
         if (isQuestion6YesChecked) {
             userScore++;
         } else {
-            question6RadioButton.setTextColor(Color.parseColor("#FFFFFF"));
-            question6RadioButton.setBackgroundColor(Color.parseColor("#2196F3"));
+            highlightRadioButton((RadioButton) findViewById(R.id.question_6_a));
             question6RadioButton.setText(getString(R.string.question_6_correction));
         }
 
         /**
          * Gives user credit for question 7. A-J are the 10 choices available.  If at least four of these are checked, you receive four points toward your total score.
          */
-
         CheckBox question7A = (CheckBox) findViewById(R.id.question_7_a);
         if (question7A.isChecked()) {
             question7Score++;
@@ -208,10 +231,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (question7Score < 4) {
-            TextView question7 = (TextView) findViewById(R.id.question7Text);
-            question7.setTextColor(Color.parseColor("#FFFFFF"));
-            question7.setBackgroundColor(Color.parseColor("#2196F3"));
-            question7.setText(getString(R.string.question_7_correction));
+            highlightErrorQuestion((TextView) findViewById(R.id.question7Text), getString(R.string.question_7_correction));
+
         }
 
         Switch question8Switch = (Switch) findViewById(R.id.question_8);
@@ -219,10 +240,8 @@ public class MainActivity extends AppCompatActivity {
         if (question8SwitchState) {
             userScore++;
         } else {
-            TextView question8 = (TextView) findViewById(R.id.question8Text);
-            question8.setTextColor(Color.parseColor("#FFFFFF"));
-            question8.setBackgroundColor(Color.parseColor("#2196F3"));
-            question8.setText(getString(R.string.question_8_correction));
+            highlightErrorQuestion((TextView) findViewById(R.id.question8Text), getString(R.string.question_8_correction));
+
 
         }
 
