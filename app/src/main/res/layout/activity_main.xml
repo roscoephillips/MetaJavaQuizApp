@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0E0"
     android:fillViewport="true">
 
     <LinearLayout
@@ -14,6 +15,7 @@
         android:layout_marginTop="16dp"
         android:orientation="vertical"
         tools:context="MainActivity">
+
 
         <EditText
             android:id="@+id/name"
