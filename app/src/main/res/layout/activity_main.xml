@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E0E0E0"
     android:fillViewport="true">
 
     <LinearLayout
@@ -14,6 +15,14 @@
         android:layout_marginTop="16dp"
         android:orientation="vertical"
         tools:context="MainActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/quiz_time"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+
 
         <EditText
             android:id="@+id/name"
@@ -240,7 +249,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="TextView" />
+                    android:text="@string/q7_textview" />
 
                 <CheckBox
                     android:id="@+id/question_7_b"
@@ -249,7 +258,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="RadioGroup" />
+                    android:text="@string/q7_radiogroup" />
 
                 <CheckBox
                     android:id="@+id/question_7_c"
@@ -258,7 +267,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="CheckBox" />
+                    android:text="@string/q7_checkbox" />
 
                 <CheckBox
                     android:id="@+id/question_7_d"
@@ -267,7 +276,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="EditText" />
+                    android:text="@string/q7_edittext" />
 
 
                 <CheckBox
@@ -277,7 +286,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="LinearLayout" />
+                    android:text="@string/q7_linearlayout" />
 
             </LinearLayout>
 
@@ -294,7 +303,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="RelativeLayout" />
+                    android:text="@string/q7_relativelayout" />
 
                 <CheckBox
                     android:id="@+id/question_7_g"
@@ -303,7 +312,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="ScrollView" />
+                    android:text="@string/q7_scrollview" />
 
                 <CheckBox
                     android:id="@+id/question_7_h"
@@ -312,7 +321,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="RadioButton" />
+                    android:text="@string/q7_radiobutton" />
 
                 <CheckBox
                     android:id="@+id/question_7_i"
@@ -322,7 +331,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_weight="1"
                     android:paddingLeft="16dp"
-                    android:text="ImageView" />
+                    android:text="@string/q7_imageview" />
 
                 <CheckBox
                     android:id="@+id/question_7_j"
@@ -331,7 +340,7 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="16dp"
-                    android:text="Button" />
+                    android:text="@string/q7_button" />
 
             </LinearLayout>
         </LinearLayout>

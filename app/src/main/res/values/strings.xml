@@ -73,6 +73,19 @@
     <!-- Question 7 correction -->
     <string name="question_7_correction">7.  You could use more view variety. Please add more views to your quiz app.</string>
 
+
+    <!-- Question 7 options including the various types of view groups. -->
+    <string name="q7_textview">TextView</string>
+    <string name="q7_radiogroup">RadioGroup</string>
+    <string name="q7_checkbox">CheckBox</string>
+    <string name="q7_edittext">EditText</string>
+    <string name="q7_linearlayout">LinearLayout</string>
+    <string name="q7_relativelayout">RelativeLayout</string>
+    <string name="q7_scrollview">ScrollView</string>
+    <string name="q7_radiobutton">RadioButton</string>
+    <string name="q7_imageview">ImageView</string>
+    <string name="q7_button">Button</string>
+
     <!-- Question 8. -->
     <string name="question_8">8.  Does your app handle rotation gracefully? </string>
 
